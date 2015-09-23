@@ -8,26 +8,27 @@
     <h:outputStylesheet library="css" name="bootstrap.min.css" />
     <h:outputStylesheet library="css" name="bootstrap-theme.min.css" />
     <h:outputScript library="css" name="bootstrap.min.js" />
-    <h:outputScript library="css" name="jquery-1.9.1.min.js" />
-    <h:outputStylesheet library="css" name="styles.css"  /> 
+    <h:outputStylesheet library="css" name="signin.css"  /> 
      
 </h:head>
 <h:body>
-    <h:form class="form-horizontal">
+<div class="container">
+    <h:form class="form-signin">
       <h:message for="username"></h:message>
         <h3 class="message">Cerberus</h3>
         <h:outputText value="Usuário: " />
-        <h:inputText id="username" value="#{login.user}"></h:inputText>
+        <h:inputText class="form-control" id="username" value="#{login.user}"></h:inputText>
       
         <br /><br />
          
         <h:outputText value="Senha: " />
-        <h:inputSecret id="password" value="#{login.pwd}"></h:inputSecret>
+        <h:inputSecret class="form-control" id="password" value="#{login.pwd}"></h:inputSecret>
         <h:message for="password"></h:message>
         <br /><br />
          
         <h:commandButton action="#{login.validateUsernamePassword}"
-            value="Login"></h:commandButton>
+            value="Entrar" class="btn btn-lg btn-primary btn-block"></h:commandButton>
     </h:form>
+    </div>
 </h:body>
 </html>
