@@ -1,20 +1,27 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html">
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:a4j="https://ajax4jsf.dev.java.net/ajax">
 <h:head>
     <title>login</title>
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    <h:outputStylesheet library="css" name="bootstrap-theme.min.css" />
+    <h:outputScript library="css" name="bootstrap.min.js" />
+    <h:outputScript library="css" name="jquery-1.9.1.min.js" />
+    <h:outputStylesheet library="css" name="styles.css"  /> 
+     
 </h:head>
 <h:body>
-    <h:form>
+    <h:form class="form-horizontal">
       <h:message for="username"></h:message>
-        <h3>JSF Login Logout</h3>
-        <h:outputText value="Username" />
+        <h3 class="message">Cerberus</h3>
+        <h:outputText value="Usuário: " />
         <h:inputText id="username" value="#{login.user}"></h:inputText>
       
         <br /><br />
          
-        <h:outputText value="Password" />
+        <h:outputText value="Senha: " />
         <h:inputSecret id="password" value="#{login.pwd}"></h:inputSecret>
         <h:message for="password"></h:message>
         <br /><br />
