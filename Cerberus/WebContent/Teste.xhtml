@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui">
+      
+
+<h:head></h:head> 
+<body> 			
+	
+	<p:breadCrumb>
+    <p:menuitem value="Home" url="index.faces" />
+    <p:menuitem value="Atividades" url="page.faces" />
+    <p:menuitem value="Funcionarios" url="DockMenu.faces" />
+    <p:menuitem value="Cadastro" url="Sac.faces" />
+
+</p:breadCrumb>
+	
+	<br />
+	Bem vindo : <h:outputText value="#{login.user}" />
+	<br />
+	
+<p:chart type="bar" model="#{chartView.barModel}" style="height:300px"/>
+ 
+<p:chart type="bar" model="#{chartView.horizontalBarModel}" style="height:300px"/>
+
+<p:dock position="bottom">
+	<p:menuitem value="Home" icon="images/home.png" url="index.faces"/>
+    <p:menuitem value="Email" icon="images/email.png" url="http://www.gmail.com.br"/>
+    <p:menuitem value="Music" icon="images/music.png" url="#"/>
+    <p:menuitem value="Histórico" icon="images/history.png" url="#"/>
+    <p:menuitem value="Imagens" icon="images/link.png" url="#"/>
+    <p:menuitem value="Estoque" icon="images/portfolio.png" url="#"/>
+   
+</p:dock>
+</body> 
+</html>
