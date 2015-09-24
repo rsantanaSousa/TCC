@@ -40,7 +40,7 @@ public class AuthorizationFilter implements Filter {
                     || reqURI.contains("javax.faces.resource"))
                 chain.doFilter(request, response);
             else
-                resp.sendRedirect(reqt.getContextPath() + "/login.jsf");
+                resp.sendRedirect(reqt.getContextPath() + "/admin.jsf");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
